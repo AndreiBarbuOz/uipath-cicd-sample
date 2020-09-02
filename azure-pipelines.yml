@@ -14,15 +14,16 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: dir $(Build.SourcesDirectory)
+
+- script: dir $(Build.SourcesDirectory)\uipath-cicd-sample
 
 - task: UiPathPack@2
   inputs:
     versionType: AutoVersion
     #version: '1.0.0' # Required when versionType == ManualVersion
-    projectJsonPath: '$(Build.SourcesDirectory)\uipath-cicd-sample\'
-    outputPath: '$(Build.ArtifactStagingDirectory)\uipath-cicd-sample\'
+    projectJsonPath: '$(Build.SourcesDirectory)\uipath-cicd-sample\project.json'
+    outputPath: '$(Build.ArtifactStagingDirectory)\output'
     #outputType: 'None' # Options: Process, Library, Tests, Objects, None
     orchestratorConnection: 'uat' # Service connection to UiPath Orchestrator
 
