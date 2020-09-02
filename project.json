@@ -10,7 +10,7 @@
   "webServices": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.4.1.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.52766171",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -31,11 +31,23 @@
     },
     "fileInfoCollection": [
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "e376b462-d887-46a7-8c00-94f5058d5757",
         "fileName": "TestCase.xaml"
       }
     ]
   },
-  "expressionLanguage": "VisualBasic"
+  "arguments": {
+    "input": [],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "TestCase.xaml",
+      "uniqueId": "e376b462-d887-46a7-8c00-94f5058d5757",
+      "input": [],
+      "output": []
+    }
+  ]
 }
