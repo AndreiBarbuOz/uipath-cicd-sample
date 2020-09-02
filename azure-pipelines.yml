@@ -16,13 +16,12 @@ pool:
 steps:
 - script: dir $(Build.SourcesDirectory)
 
-- script: dir $(Build.SourcesDirectory)\uipath-cicd-sample
 
 - task: UiPathPack@2
   inputs:
     versionType: AutoVersion
     #version: '1.0.0' # Required when versionType == ManualVersion
-    projectJsonPath: '$(Build.SourcesDirectory)\uipath-cicd-sample\project.json'
+    projectJsonPath: '$(Build.SourcesDirectory)'
     outputPath: '$(Build.ArtifactStagingDirectory)\output'
     #outputType: 'None' # Options: Process, Library, Tests, Objects, None
     orchestratorConnection: 'uat' # Service connection to UiPath Orchestrator
