@@ -26,3 +26,10 @@ steps:
     #outputType: 'None' # Options: Process, Library, Tests, Objects, None
     orchestratorConnection: 'uat' # Service connection to UiPath Orchestrator
 
+- task: UiPathDeploy@2
+  inputs:
+    orchestratorConnection: 'uat' # Service connection to UiPath Orchestrator
+    packagesPath: '$(Build.ArtifactStagingDirectory)\output'
+    folderName: 'Default'
+    environments: 'test-machines' # Optional
+    
